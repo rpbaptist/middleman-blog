@@ -1,0 +1,37 @@
+<footer>
+  <ul class="large-column">
+    <li><h5 class="heading">Recent Articles</h5></li>
+    <li>
+      <ol>
+        <% blog.articles[0...10].each do |article| %>
+          <li>
+            <%= link_to article.title, article %>
+            <span><%= article.date.strftime('%b %e') %></span>
+          </li>
+        <% end %>
+      </ol>
+    </li>
+  </ul>
+
+  <ul class="small-column">
+    <li><h5 class="heading">Tags</h5></li>
+    <li>
+      <ol>
+        <% blog.tags.each do |tag, articles| %>
+          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+        <% end %>
+      </ol>
+    </li>
+  <ul>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</footer>

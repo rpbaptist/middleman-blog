@@ -1,0 +1,50 @@
+html {height: 100%;}
+
+body {
+  background-color: #42A0A6;
+  color: #F5FFCC;
+
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  display: inline;
+  margin: auto;
+  top: 2em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  li {
+    display: inline;
+  }
+}
+
+article {
+  background-color: #EFD898;
+  color: #2B1200;
+}
+
+.background {
+  // min-height: 100%;
+  // height:auto !important;
+  height: 100%;
+  width: 100%;
+  background-image: image-url("/img/hills.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: fixed;
+  bottom: 0;
+  // background-attachment: fixed;
+  z-index: -1;
+}
+
+a:link {
+    text-decoration: none;
+    color: #91AA9D;
+}
