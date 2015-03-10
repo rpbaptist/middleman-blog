@@ -26,4 +26,5 @@ ol {
 
 .small-column {
   @include span-columns(4 of 12);
+  padding-left: 2em;
 }
