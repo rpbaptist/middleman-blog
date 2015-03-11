@@ -7,13 +7,40 @@ body {
 }
 
 .large-column {
-  @include span-columns(8 of 12);
+  @include span-columns(9 of 12);
 }
 
 .small-column {
-  @include span-columns(4 of 12);
-  padding-left: 2em;
+  @include span-columns(3 of 12);
+}
+
+article {
+  background-color: $light-yellow;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 .article-preview {
+  @extend article;
+  margin-bottom: 1.8em;
+}
+
+.article-title {
+  font-size: 1.5em;
+}
+
+.article-date {
+  text-align: right;
+  float: right;
+  clear: both;
+  margin-right: 0.5em;
+}
+
+.article-more {
+  font-size: 0.9em;
+}
+
+header img {
+  border: $base-border;
+  border-radius: 0.4em;
 }

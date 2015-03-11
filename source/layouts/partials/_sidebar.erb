@@ -1,17 +1,19 @@
-<h5 class="heading">Recent Articles</h5>
-<ol>
-  <% blog.articles[0...10].each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-      <br>
-      <%= article.date.strftime('%B %e') %>
-    </li>
-  <% end %>
-</ol>
+<div class="sidebar">
+  <h5 class="heading articles-recent">Recent Articles</h5>
+  <ol>
+    <% blog.articles[0...10].each do |article| %>
+      <li>
+        <%= link_to article.title, article %>
+        <br>
+        <%= article.date.strftime('%d-%m-%Y') %>
+      </li>
+    <% end %>
+  </ol>
 
-<h5 class="heading">Tags</h5>
-<ol>
-  <% blog.tags.each do |tag, articles| %>
-    <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-  <% end %>
-</ol>
+  <h5 class="heading">Tags</i></h5>
+  <ol>
+    <% blog.tags.each do |tag, articles| %>
+      <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+    <% end %>
+  </ol>
+</div>
