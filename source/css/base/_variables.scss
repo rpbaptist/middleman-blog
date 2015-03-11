@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: 'Oxygen', $helvetica;
+$base-font-family: 'Source Sans Pro', $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -16,18 +16,19 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$light-yellow: #F5FFCC;
+$light-green: #D1DBBD;
+$green-gray: #91AA9D;
+$blue-green: #3E606F;
+$darker-blue: #202A38;
 
 // Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-background-color: $light-green;
+$base-font-color: $darker-blue;
+$action-color: $blue-green;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $green-gray;
 $base-border: 1px solid $base-border-color;
 
 // Forms

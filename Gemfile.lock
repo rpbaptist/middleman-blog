@@ -155,8 +155,8 @@ DEPENDENCIES
   bourbon
   brice
   builder (~> 3.0)
-  middleman (~> 3.3.7)
-  middleman-blog (~> 3.5.3)
+  middleman
+  middleman-blog
   middleman-livereload
   neat
   nokogiri

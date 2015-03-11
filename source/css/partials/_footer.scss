@@ -1,5 +1,22 @@
 footer {
   border-top: 1px solid $base-border-color;
-  margin: 2em 0;
-  padding-top: 2em;
+  margin: 1em 0;
+  padding-top: 1em;
+
+  .copyright {
+    font-size: 0.7em;
+    position: relative;
+    margin: 0;
+    float: left;
+    clear: both;
+  }
+
+  .contact {
+    text-align: center;
+
+    li {
+      display: inline;
+      padding: 0 0.5em;
+    }
+  }
 }

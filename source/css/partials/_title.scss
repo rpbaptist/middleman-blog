@@ -8,9 +8,18 @@ nav {
   }
 }
 
+.title {
+  text-align: center;
+}
+
 .blog-title {
   font-size: 1.4em;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: $green-gray;
+
+  span {
+    color: $blue-green;
+  }
 }

@@ -2,22 +2,8 @@
   @include outer-container;
 }
 
-ol {
-  font-size: 1em;
-  font-weight: 500;
-
-  li {
-    margin: .5em 0;
-
-    span {
-      display: inline-block;
-
-      &:before {
-        content: '/';
-        margin: 0 .3em;
-      }
-    }
-  }
+body {
+  background-color: $light-green;
 }
 
 .large-column {
@@ -27,4 +13,7 @@ ol {
 .small-column {
   @include span-columns(4 of 12);
   padding-left: 2em;
+}
+
+.article-preview {
 }
