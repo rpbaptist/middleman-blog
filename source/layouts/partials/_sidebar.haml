@@ -1,0 +1,15 @@
+.sidebar
+  %h5.heading= link_to 'About me', '/about.html'
+
+  %h5.heading.articles-recent Recent Articles
+  %ol
+    - blog.articles[0...10].each do |article|
+      %li
+        = link_to article.title, article
+        %br
+        = article.date.strftime('%d-%m-%Y')
+
+  %h5.heading Tags
+  %ol
+    - blog.tags.each do |tag, articles|
+      %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
