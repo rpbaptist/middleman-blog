@@ -67,7 +67,12 @@ page "/feed.xml", layout: false
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
+activate :syntax
 
+
+set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true
+
+set :markdown_engine, :redcarpet
 
 # Reload the browser automatically whenever files change
 activate :livereload
