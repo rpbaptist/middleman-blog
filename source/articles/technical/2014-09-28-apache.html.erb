@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/shared.js"></script>
-  <title>Blog - Apache</title>
-</head>
-<body>
-  <div class ="title t_top">
-   <h1>Open Frontier</h1>
- </div>
- <nav class="nav_top">
-  <ul>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../projects.html">Projects</a></li>
-    <li><a href="../blog-index.html">Blog</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+---
+title: Apache
+date: 2014/09/28
+category: technical
+tags: dbc, apache, web server
+---
 <article>
   <header>
     <h1>Apache Webserver</h1>
-    <img src="../imgs/blog/nginx_vs_apache.png">
+    <% image_tag 'img/blog/nginx_vs_apache.png' %>
     <span class="subtext">This could also be a beautiful friendship in the making.</span>
   </header>
   <section>
     <p>This week I decided to write something about Apache Webserver which is an open source web server and the one most used one in the world. The <a href="http://news.netcraft.com/archives/2014/09/24/september-2014-web-server-survey.html" target="_blank">latest survey</a> shows 39.74% of all web servers is Apache. Time for a quick overview.</p>
   </section>
+  READMORE
   <section>
     <h3>What is Apache?</h3>
     <p>The first thing to be aware of that the web server isn't a physical machine like what you would normally think of as a server. Think of it more in the literal sense of the word: It mostly serves web pages, but web pages are simply html files. So a web server can serve any file. The file served depends on several things; The incoming request (person clicking on a link) and the rules set in the web server configuration.</p>
@@ -75,11 +61,4 @@
     <p>I have worked with Apache, but haven't touched half of its options. Apache is relatively easy to set up on a simple environment and provides flexibility for complexity. I hope you enjoyed my brief overview here and if you are interested I would encourage looking up more resources. When you want to host the awesome websites and applications you will build it could be interesting to get more familiar with this technology.</p>
     <p>Personally I also believe that the more knowledge you have over the entire chain in which your program runs, the easier you will be able to pinpoint any problems you run which in turn helps you to solve them faster. This has been my experience with problem analysis and troubleshooting over the years.</p>
   </section>
-
-  <footer class="subtext">
-    <span>Written by Richard Baptist,</span>
-    <time datetime="2014-09-28">28 September 2014</time>
-  </footer>
 </article>
-</body>
-</html>

@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/shared.js"></script>
-    <title>Blog - Classes and Modules</title>
-  </head>
-  <body>
-    <div class ="title t_top">
-     <h1>Open Frontier</h1>>
-    </div>
-    <nav class="nav_top">
-      <ul>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../projects.html">Projects</a></li>
-        <li><a href="../blog-index.html">Blog</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </nav>
+---
+title: Classes and Modules
+date: 2014/09/13
+category: technical
+tags: dbc, ruby
+---
     <article>
       <header>
         <h1>Classes and Modules</h1>
@@ -27,33 +12,34 @@
   		  <p>In <a href="week5_technical.html">last week's blog post</a> I wrote a short bit on classes in Ruby and how they can be interacted with. This week I am taking a look at modules and how they differ from classes.</p>
         <p>The easiest way to describe modules is by considering them to provide a piece of functionality which could be useful to other classes. Instead of repeating the same code in a different class or calling a seemingly unrelated class for a specific function, modules offer the option to separate this functionality from a class and making it available to other classes.</p>
       </section>
+      READMORE
 
       <section>
         <h3>How this is done</h3>
         <p>Have a look at the linked blog post if you wish to see how classes are declared. Maybe I would like to extend my VideoGame class so I can load my saved games. I could achieve this by adding a new method:</p>
-        <pre class="code">
+        <% code 'ruby' do %>
         class VideoGame
           def load_game(file_nr)
             puts "Loading #{game}_#{file_nr}"
           end
         end
-        </pre>
+        <% end %>
         <p>Say instead of printing out text this would actually be a lot longer, getting a file, checking it, loading it. Mission accomplished. But now I am writing a different class, maybe a music player, and I also want to load files into there. My DRY alert is going off and here is where modules come into play. They are declared much the same as classes:</p>
-        <pre class="code">
+        <% code 'ruby' do %>
         module LoadFile
           def load_file(file)
             puts "Loading #{file}"
           end
         end
-        </pre>
+        <% end %>
         Now I just need to use this module in my VideoGame class:
-        <pre class="code">
+        <% code 'ruby' do %>
         class VideoGame
           include LoadFile
         end
-        </pre>
+        <% end %>
         <p>But wait! Now we can use the Load_File#load_file method, but how are we going to give it the right parameter? I want to keep LoadFile as objective as possible, so instead of complicating that method I can make a simple alteration in VideoGame:</p>
-        <pre class="code">
+        <% code 'ruby' do %>
         class VideoGame
           include LoadFile
 
@@ -62,16 +48,16 @@
             load_file(game_file)
           end
         end
-        </pre>
+        <% end %>
         <p>Last week I used Skyrim, let's stick with that. Say I want to load my last saved game, which is the 18th save of Skyrim. Instead of writing my 'extensive' file loading method again for the VideoGame class I use the existing one which I can use for music and video players as well. In this example I only make sure that I provide the correct file name, then call on the module.</p>
         <p><a href="https://github.com/harlekein/harlekein.github.io/blob/master/assignments/VideoGame_module.rb">This file on GitHub</a>.
         <p>When I load it in IRB I can do the same as last time:</p>
-        <pre class="code">
-        &gt; skyrim = VideoGame.new("Skyrim")
-        =&gt; #&lt;VideoGame:0x007f792baf8e20 @title="Skyrim"&gt;
-        &gt; skyrim.load_game(18)
+        <% code 'ruby' do %>
+        >; skyrim = VideoGame.new("Skyrim")
+        =>; #<;VideoGame:0x007f792baf8e20 @title="Skyrim">;
+        >; skyrim.load_game(18)
         Loading Skyrim_18
-        </pre>
+        <% end %>
       </section>
 
       <section>
@@ -79,11 +65,4 @@
         <p>Good question. The same can be accomplished with another class, but classes are designed to be instantiated. To load a file there is no reason to create a new instance for each file we load. It is a design choice and best practice to use a module in this way.</p>
         <p>This was just a short introduction to modules. For more information I would recommend reading chapter 4 in David A. Black's The Well-Grounded Rubyist. For a concise overview I found <a href="http://stackoverflow.com/questions/151505/difference-between-a-class-and-a-module">this question on StackOverflow</a> helpful.</p>
       </section>
-
-      <footer class="subtext">
-        <span>Written by Richard Baptist,</span>
-        <time datetime="2014-09-13">13 September 2014</time>
-      </footer>
   	</article>
-  </body>
-</html>
