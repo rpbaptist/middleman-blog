@@ -6,19 +6,19 @@
 <html class="no-js">
   <!--<![endif]-->
   <%= partial "/layouts/partials/header.haml" %>
-    <body>
-      <!--[if lt IE 7]>
-          <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-      <![endif]-->
-      <%= partial "/layouts/partials/title.haml" %>
-        <div id="main" role="main">
-          <div class="large-column">
-            <%= yield %>
-          </div>
-          <div class="small-column">
-            <%= partial "/layouts/partials/sidebar.haml" %>
-          </div>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <%= partial "/layouts/partials/title.haml" %>
+      <div id="main" role="main">
+        <div class="large-column">
+          <%= yield %>
         </div>
-      <%= partial "/layouts/partials/footer" %>
-    </body>
+        <div class="small-column">
+          <%= partial "/layouts/partials/sidebar.haml" %>
+        </div>
+      </div>
+    <%= partial "/layouts/partials/footer" %>
+  </body>
 </html>
