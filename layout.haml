@@ -1,0 +1,12 @@
+!!!
+%html.no-js
+  = partial 'layouts/partials/header'
+  %body
+    = partial 'layouts/partials/title'
+    .main{ role: 'main' }
+      .large-column
+        = yield
+
+      .small-column
+        = partial 'layouts/partials/sidebar'
+  = partial 'layouts/partials/footer'

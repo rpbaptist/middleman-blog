@@ -1,0 +1,17 @@
+%footer
+  %ul.contact
+    %li= link_to '', 'http://twitter.com/rpbaptist', class: 'fa fa-twitter-square fa-2x'
+    %li= link_to '', 'http://github.com/rpbaptist', class: 'fa fa-github-square fa-2x'
+    %li= link_to '', 'http://nl.linkedin.com/in/rpbaptist', class: 'fa fa-linkedin-square fa-2x'
+    %li= link_to '', 'http://www.last.fm/user/harlekein', class: 'fa fa-lastfm-square fa-2x'
+
+  %span.copyright.fa.fa-copyright= " copyright #{Time.now.year} Richard Baptist"
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+  %script{ type: 'text/javascript' }
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60728788-1', 'auto');
+    ga('send', 'pageview');
