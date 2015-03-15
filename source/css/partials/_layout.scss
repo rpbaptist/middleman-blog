@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: $light-green;
+  background-color: $base-background-color;
 }
 
 .large-column {
@@ -34,8 +34,8 @@ body {
 }
 
 article {
-  background-color: $light-yellow;
-  border-radius: 0.5em;
+  background-color: $div-background-color;
+  border-radius: $base-border-radius;
   padding: 0.5em;
   text-align: justify;
 }
@@ -62,5 +62,5 @@ article {
 
 header img {
   border: $base-border;
-  border-radius: 0.4em;
+  border-radius: $inner-border-radius;
 }

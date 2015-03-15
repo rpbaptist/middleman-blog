@@ -10,25 +10,32 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: 0.5em;
+$inner-border-radius: 0.4em;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$light-yellow: #E4EDD1;
-$light-green: #D1DBBD;
-$green-gray: #91AA9D;
-$blue-green: #3E606F;
-$darker-blue: #202A38;
+$dark-green-blue: #092a2a;
+$green-gray: #5B845E;
+$red: #93032e;
+$light-green: #95ce82;
+$lighter-green-yellow: #D5EAC0;
+$lighter: #d1f0b1;
 
 // Font Colors
+$title-color-1: $lighter-green-yellow;
+$title-color-2: $green-gray;
+$base-font-color: $dark-green-blue;
+$action-color: $green-gray;
+
+// Div Colors
+$div-background-color: $lighter;
 $base-background-color: $light-green;
-$base-font-color: $darker-blue;
-$action-color: $blue-green;
 
 // Border
-$base-border-color: $darker-blue;
+$base-border-color: $dark-green-blue;
 $base-border: 0.15em solid $base-border-color;
 
 // Forms

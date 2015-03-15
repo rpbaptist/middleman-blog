@@ -1,11 +1,12 @@
 footer {
   border-top: 1px solid $base-border-color;
-  margin: 1em 0;
-  padding-top: 1em;
+  margin: 2em 0;
+  padding-top: 2em;
 
   .copyright {
     font-size: 0.7em;
     position: relative;
+    bottom: -1em;
     margin: 0;
     float: left;
     clear: both;
