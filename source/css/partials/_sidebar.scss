@@ -1,16 +1,14 @@
 .sidebar {
-  // position: relative;
-  // top: 1.4em;
   background-color: $div-background-color;
   border-radius: $base-border-radius;
   padding: 0.5em;
   font-weight: 500;
 
   ol {
-    margin: 1em 0;
+    margin-bottom: 1em;
 
     li {
-      margin: 0.4em 0;
+      margin: 0.3em 0;
       font-size: 0.8em;
     }
   }
