@@ -1,10 +1,10 @@
 nav {
   border-bottom: 1px solid $base-border-color;
-  margin: em(30) 0;
+  margin: em(20) 0;
 
   ul {
     display: inline-block;
-    margin-bottom: em(10);
+    margin-bottom: em(0.6);
   }
 }
 
@@ -13,9 +13,11 @@ nav {
 }
 
 .blog-title {
-  font-size: 1.4em;
+  position: relative;
+  top: -0.4em;
+  font-size: 1.6em;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: $title-color-1;
 
