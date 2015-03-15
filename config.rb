@@ -19,7 +19,12 @@ activate :blog do |blog|
   blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
-
+  blog.custom_collections = {
+    category: {
+      link: 'categories/{category}.html',
+      template: 'category.html'
+    }
+  }
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
@@ -73,7 +78,6 @@ activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autolink: true, gh_blockcode: true
 
-
 # Reload the browser automatically whenever files change
 activate :livereload
 
@@ -98,3 +102,4 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+

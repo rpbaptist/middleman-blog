@@ -9,7 +9,12 @@
         %br
         = article.date.strftime('%d-%m-%Y')
 
+  %h5.heading Categories
+  %ol
+    - articles_by_category.each do |category, articles|
+      %li= link_to "#{category} (#{articles.count})", category_path(category)
+
   %h5.heading Tags
   %ol
     - blog.tags.each do |tag, articles|
-      %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+      %li= link_to "#{tag} (#{articles.count})", tag_path(tag)
