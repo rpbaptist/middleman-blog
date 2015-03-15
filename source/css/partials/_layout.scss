@@ -5,13 +5,13 @@
 body {
   background-color: $base-background-color;
 }
-
-.large-column {
-  @include span-columns(9 of 12);
+.small-column {
+  @include span-columns(3 of 15);
 }
 
-.small-column {
-  @include span-columns(3 of 12);
+.large-column {
+  @include span-columns(9 of 15);
+  margin-left: 20%;
 }
 
 .page-navigation {
@@ -24,6 +24,7 @@ body {
   position: relative;
   top: -0.5em;
 }
+
 .page-num{
   position: relative;
   top: -0.5em;
@@ -38,6 +39,10 @@ article {
   border-radius: $base-border-radius;
   padding: 0.5em;
   text-align: justify;
+
+  h1 {
+    font-size: 1.5em;
+  }
 }
 
 .articles-listing {
