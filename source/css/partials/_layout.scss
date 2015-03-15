@@ -40,6 +40,14 @@ article {
   text-align: justify;
 }
 
+.articles-listing {
+  @extend article;
+
+  li {
+    margin-bottom: 0.4em;
+  }
+}
+
 .article-preview {
   @extend article;
   margin-bottom: 1.8em;

@@ -4,7 +4,7 @@ per_page: 12
 ---
 
 .articles-listing
-  %h1= "Articles in category '#{category}'"
+  %h1= "Articles tagged '#{tagname}'"
 
   - if paginate && num_pages > 1
     %p= "Page #{page_number} of #{num_pages}"
