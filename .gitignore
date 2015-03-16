@@ -14,5 +14,5 @@
 /.sass-cache
 /.cache
 
-# Ignore .DS_store file
+# Ignore .fuse_hidden files
 *.fuse_hidden*
