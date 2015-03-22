@@ -17,26 +17,32 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$red-brown: #A96A51;
+$yellow: #F2DEB3;
+$light-blue: #A2E1F0;
+$bright-blue: #3D596D;
+$darker-blue: #1C2133;
+$blue-green: #5489AF;
+
+$header-color: #0A3860;
+
 $dark-green-blue: #092a2a;
 $green-gray: #5B845E;
-$red: #93032e;
-$lighter-green: #ACDED6;
-$light-green: #95ce82;
-$lighter-green-yellow: #D5EAC0;
-$lighter: #d1f0b1;
 
 // Font Colors
-$title-color-1: $lighter-green-yellow;
-$title-color-2: $green-gray;
-$base-font-color: $dark-green-blue;
-$action-color: $green-gray;
+$title-color-1: $light-blue;
+$title-color-2: $header-color;
+$base-font-color: #252B42;
+$action-color: #214F70;
+$contact-button-color: $light-blue;
+$font-on-background-color: $light-blue;
 
 // Div Colors
-$div-background-color: $lighter;
-$base-background-color: $light-green;
+$div-background-color: $yellow;
+$base-background-color: #2E5A7C;
 
 // Border
-$base-border-color: $dark-green-blue;
+$base-border-color: $darker-blue;
 $base-border: 0.15em solid $base-border-color;
 
 // Forms

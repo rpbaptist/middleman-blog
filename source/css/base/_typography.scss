@@ -17,6 +17,7 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  font-color: $header-color;
 }
 
 p {
@@ -53,3 +54,4 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+

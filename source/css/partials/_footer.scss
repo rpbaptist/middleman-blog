@@ -1,7 +1,12 @@
 footer {
   border-top: 1px solid $base-border-color;
+  color: $font-on-background-color;
   margin: 2em 0;
   padding-top: 2em;
+
+  a {
+  color: $contact-button-color;
+  }
 
   .copyright {
     font-size: 0.7em;
