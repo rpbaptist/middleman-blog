@@ -1,8 +1,15 @@
 <%= Rouge::Themes::Monokai.render(scope: '.highlight') %>
 .highlight {
   white-space: pre-wrap;
-  margin: 1.5em 0;
-  padding: 1em 0;
+  margin: 1em 0;
+  padding: 0 1em;
   overflow-x: auto;
   border-radius: $inner-border-radius;
+  font-family: $monospace-font-family;
+  font-size: 1.1em;
+}
+
+.inline-code {
+  font-size: 1em;
+  font-family: $monospace-font-family;
 }
