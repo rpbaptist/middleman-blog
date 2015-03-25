@@ -38,6 +38,6 @@ tags: linux, postgres, ruby, rails
     %p This is where you should go: <span class='inline-code'>/etc/postgresql/9.3/main/pg_hba.conf</span>
     %p Then I simply added this line:
     :code
-      # TYPE  DATABASE        USER            ADDRESS                 METHOD
-      host    all             richard         127.0.0.1/32            trust
+      # TYPE  DATABASE     USER          ADDRESS            METHOD
+      host    all          richard       127.0.0.1/32       trust
     %p This means that for user 'richard' I set a blank password and now allow all connections which I run from Rails. That's it really. Nice and easy.
