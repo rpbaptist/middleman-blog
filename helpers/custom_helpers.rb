@@ -4,7 +4,9 @@ def provide_summary(article)
 end
 
 def articles_by_category
-  category_articles = { "technical" => [], "cultural" => [] }
-  blog.articles.each{ |article| category_articles[article.metadata[:page]["category"]] << article }
+  category_articles = { 'technical' => [], 'cultural' => [] }
+  blog.articles.each do |article|
+    category_articles[article.metadata[:page]['category']] << article
+  end
   category_articles
 end
