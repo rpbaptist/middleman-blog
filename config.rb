@@ -44,16 +44,15 @@ page "/feed.xml", layout: false
 activate :automatic_image_sizes
 activate :syntax
 
-
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, tables: true, autolink: true, gh_blockcode: true
 
 # Reload the browser automatically whenever files change
 activate :livereload
 
-set :css_dir, 'css'
-set :js_dir, 'js'
-set :images_dir, 'img'
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
