@@ -9,11 +9,9 @@ gem 'middleman-syntax'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
-gem 'bitters'
-gem 'bourbon'
 gem 'brice'
 gem 'middleman-livereload'
-gem 'neat'
 gem 'nokogiri'
 gem 'pry'
 gem 'redcarpet'
+gem 'sass'
