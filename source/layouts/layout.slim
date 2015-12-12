@@ -1,0 +1,28 @@
+doctype html
+/[if lt IE 7]
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+/[if IE 7]
+  html.no-js.lt-ie9.lt-ie8
+/[if IE 8]
+  html.no-js.lt-ie9
+/[if gte IE 8]
+  html.no-js
+= partial '/layouts/partials/head'
+body
+  /[if lt IE 7]
+    p.chromeframe
+      | You are using an outdated browser.
+      =< link_to 'Upgrade your browser today', 'http://browsehappy.com/'
+      | or
+      =< link_to 'install Google Chrome Frame', 'http://www.google.com/chromeframe/?redirect=true'
+      | to better experience this site.
+
+  = partial '/layouts/partials/title'
+
+  #main role='main'
+    .blog-content
+      = yield
+
+    = partial '/layouts/partials/side_nav'
+
+  = partial '/layouts/partials/footer'
