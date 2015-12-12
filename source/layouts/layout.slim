@@ -20,7 +20,9 @@ body
   = partial '/layouts/partials/title'
 
   #main role='main'
-    .blog
+    .blog--wrapper
+      .blog--spacer
+
       .blog--content
         = yield
 
