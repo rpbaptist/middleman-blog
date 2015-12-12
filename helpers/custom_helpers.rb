@@ -11,6 +11,6 @@ def articles_by_category
   category_articles
 end
 
-def contact_button_classes(name)
-  "fa fa-#{name}-square fa-3x footer--contact--item__link"
+def contact_button(contact_url, name)
+  link_to '', contact_url, class: "fa fa-#{name}-square fa-3x footer--contact--item__link"
 end
