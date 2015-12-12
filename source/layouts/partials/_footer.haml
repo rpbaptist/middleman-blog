@@ -1,12 +1,14 @@
 %footer
-  %ul.contact
-    %li= link_to '', 'http://twitter.com/rpbaptist', class: 'fa fa-twitter-square fa-3x'
-    %li= link_to '', 'http://github.com/rpbaptist', class: 'fa fa-github-square fa-3x'
-    %li= link_to '', 'http://nl.linkedin.com/in/rpbaptist', class: 'fa fa-linkedin-square fa-3x'
-    %li= link_to '', 'http://www.last.fm/user/harlekein', class: 'fa fa-lastfm-square fa-3x'
+  %ul.footer--contact
+    %li.footer--contact--item= link_to '', 'http://twitter.com/rpbaptist', class: contact_button_classes('twitter')
+    %li.footer--contact--item= link_to '', 'http://github.com/rpbaptist', class: contact_button_classes('github')
+    %li.footer--contact--item= link_to '', 'http://nl.linkedin.com/in/rpbaptist', class: contact_button_classes('linkedin')
+    %li.footer--contact--item= link_to '', 'http://www.last.fm/user/harlekein', class: contact_button_classes('lastfm')
 
-  %span.copyright.fa.fa-copyright= " copyright #{Time.now.year} Richard Baptist"
-  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+  .footer-copyright.fa.fa-copyright
+    = " copyright #{Time.now.year} Richard Baptist"
+
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
   %script{ type: 'text/javascript' }
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
