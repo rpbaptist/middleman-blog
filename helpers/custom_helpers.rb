@@ -10,3 +10,7 @@ def articles_by_category
   end
   category_articles
 end
+
+def contact_button_classes(name)
+  "fa fa-#{name}-square fa-3x footer--contact--item__link"
+end
