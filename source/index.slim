@@ -17,9 +17,11 @@ per_page: 5
         = link_to ' read more...', article, class: 'fa fa-angle-double-right'
 
 .page-nav
-- if paginate && num_pages > 1
-  .page-nav--num = "Page #{page_number} of #{num_pages}"
+  - if paginate && num_pages > 1
+    .page-nav--num = "Page #{page_number} of #{num_pages}"
+
   - if prev_page
-    .page-nav--prev = link_to 'Previous page', prev_page
-  - else
-    .page-nav--next = link_to 'Next page', next_page
+    .page-nav--prev = link_to 'Previous page', prev_page, class: 'page-nav--link'
+
+  - if next_page
+    .page-nav--next = link_to 'Next page', next_page, class: 'page-nav--link'

@@ -1,24 +1,21 @@
-.page-navigation
-  width: 750em
-
 .page-nav
-  display: inline
-  padding: 0 0.1em
-  position: relative
-  top: -0.5em
+
+.page-nav--num
   color: $font-on-background-color
+  float: left
+  margin-bottom: 0.6em
 
-  a
-    color: $font-on-background-color
-
-    &:active,
-    &:focus,
-    &:hover
-      color: darken($action-color, 15%)
-
-.page-num
-  @extend .page-nav
-
-  color: base-font-color
-  text-align: right
+.page-nav--next
   float: right
+  text-align: right
+
+.page-nav--prev
+  float: left
+  clear: both
+
+.page-nav--link
+  color: $font-on-background-color
+  &:active,
+  &:focus,
+  &:hover
+    color: darken($action-color, 15%)
