@@ -4,9 +4,16 @@
   - if prev_page
     p = link_to ' Previous page', prev_page, class: 'article-more fa fa-angle-double-left'
 
-ul
-  - page_articles.each_with_index do |article, i|
-    li = "#{link_to article.title, article} - #{article.date.strftime('%e %B %Y')}"
+table.table-listing
+  thead
+    tr
+      th Title
+      th Date
+  tbody
+  - page_articles.each do |article|
+    tr
+      td = link_to article.title, article
+      td = article.date.strftime('%e %B %Y')
 
 - if paginate
   - if next_page
