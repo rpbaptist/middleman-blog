@@ -1,0 +1,20 @@
+.side-nav
+  h5.heading Categories
+  ol.side-nav__list
+    - articles_by_category.each do |category, articles|
+      li.side-nav--list__item
+        = link_to "#{category.capitalize} (#{articles.count})", category_path(category)
+
+  h5.heading.articles-recent Recent Articles
+  ol.side-nav__list
+    - blog.articles[0...10].each do |article|
+      li.side-nav--list__item
+        = link_to article.title, article
+        br
+        = article.date.strftime('%d-%m-%Y')
+
+  h5.heading Tags
+  ol.side-nav__list
+    - blog.tags.each do |tag, articles|
+      li.side-nav--list__item
+        = link_to "#{tag} (#{articles.count})", tag_path(tag)
