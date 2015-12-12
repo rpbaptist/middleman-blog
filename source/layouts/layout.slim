@@ -20,9 +20,11 @@ body
   = partial '/layouts/partials/title'
 
   #main role='main'
-    .blog-content
-      = yield
+    .blog
+      .blog--content
+        = yield
 
-    = partial '/layouts/partials/side_nav'
+      .blog--nav
+        = partial '/layouts/partials/side_nav'
 
   = partial '/layouts/partials/footer'

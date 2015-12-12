@@ -3,24 +3,24 @@ pageable: true
 per_page: 5
 ---
 
-ul
-  ul
-    - page_articles.each_with_index do |article, i|
-      li.article-preview
-        ul.article-header
-          li.article-date
-            = article.date.strftime('%e %B %Y')
-          li.article-title
-            h3 = link_to article.title, article
+- page_articles.each_with_index do |article, i|
+  .article--content
+    .article--preview
+      .article--header
+        .article--date
+          = article.date.strftime('%e %B %Y')
+        .article--title
+          h3 = link_to article.title, article
 
-        p.article-summary
-          = provide_summary article
-          = link_to ' read more...', article, class: "article-more fa fa-angle-double-right"
+      .article--summary
+        = provide_summary article
+        .article--more
+          = link_to ' read more...', article, class: 'fa fa-angle-double-right'
 
-  ul.page-navigation
-  - if paginate && num_pages > 1
-    li.page-num = "Page #{page_number} of #{num_pages}"
-    - if prev_page
-      li.page-nav = link_to 'Previous page', prev_page
-    - else
-      li.page-nav = link_to 'Next page', next_page
+.page-nav
+- if paginate && num_pages > 1
+  .page-nav--num = "Page #{page_number} of #{num_pages}"
+  - if prev_page
+    .page-nav--prev = link_to 'Previous page', prev_page
+  - else
+    .page-nav--next = link_to 'Next page', next_page
