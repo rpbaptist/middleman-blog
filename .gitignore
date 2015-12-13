@@ -13,6 +13,3 @@
 
 # Ignore .fuse_hidden files
 *.fuse_hidden*
-
-# Ignore build dir
-/build
