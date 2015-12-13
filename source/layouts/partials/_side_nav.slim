@@ -9,6 +9,4 @@
   .side-nav--list
     - blog.articles[0...20].each do |article|
       .side-nav--list__item
-        => article.date.strftime('%d/%m/%y')
-        ' -
-        = link_to truncate(article.title, length: 24), article
+        = link_to truncate(article.title, length: 32), article
