@@ -1,0 +1,53 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"></html><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"></html><![endif]--><!--[if gte IE 8]><html class="no-js"></html><![endif]--><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><title>SQL or NoSQL</title><meta content="" name="description" /><meta content="width=device-width" name="viewport" /><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:700&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" /><link href="../../../stylesheets/all.css" rel="stylesheet" /></head><body><!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a>or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>to better experience this site.</p><![endif]--><div class="title"><a class="title--home-link" href="/">Richard<span class="title--home-link__alt">Baptist</span> Web<span class="title--home-link__alt">Developer</span></a></div><div id="main" role="main"><div class="blog--wrapper"><div class="blog--spacer"></div><div class="blog--content"><article>
+  <header>
+    <h1>SQL or NoSQL</h1>
+  </header>
+  <section>
+  <h2>Introduction</h2>
+    <p>Honestly, I never even heard of NoSQL before this week. I knew there was Oracle SQL, Microsoft SQL, MySQL, SQLite, but NoSQL? I tend to pick my technical blog topics based on what I do not know yet. This way I learn and putting my learning experience into words hopefully brings it across clearly. It does help solidify this knowledge for myself.</p>
+  </section>
+  
+
+  <section>
+    <h3>SQL</h3>
+    <p>Structured Query Language (or you can make life easy and say 'sequel') has been around for some time. It is based on table indexes, like an Excel sheet. I imagine anyone reading this will have interacted with one of those. Some may have had the misfortune of working with Microsoft Access which actually uses an SQL database as its foundation. Since SQL only deals with tables all data you wish to access needs to be in a table. This means that when you want to select data from multiple tables you first have to build the combined table with one query, then perform your query on that temporary table.</p>
+    <p>This works fine. I have supported, maintained and installed enterprise applications and they all used SQL type databases. Sometimes they got out of hand and evolved into unsightly beasts, but I don't think this is an inherent flaw of SQL itself. I read the arguments against SQL: Not scalable, inefficient. I can understand it is not optimal for each situation</p>
+  </section>
+
+  <section>
+    <h3>NoSQL</h3>
+    <img width="350" height="514" src="../../../images/blog/nosql.png" />
+    <p>N(ot) o(nly) SQL isn't one particular type of technology, but a name for all alternatives to SQL. This indicates there is no established standard which will replace SQL. Time will tell if a new standard will emerge or if different technologies will continue to evolve to address different needs.</p>
+  </section>
+
+  <section>
+    <h5>MongoDB</h5>
+    <p>MongoDB looks to be the most successful NoSQL implementation. It is open source and the company also offers enterprise packages and support. While finding information on the official website I was assaulted with sweeping statements and buzz words which appeal to managers, but I'm more interested in the inner workings. I dug a bit further and found the following information:</p>
+    <p>MongoDB works with JSON document types. JSON is a document type that looks a lot like Ruby hash types or JavaScript objects. I can understand the ease of access and programming language integration that this offers. It's impressive that it would perform well on large data quantities. Apparently this is accomplished by an implementation which keeps related data together. In SQL data could be spread over several tables and has to be joined. Depending on how your data is sorted this can result in poor performance.</p>
+  </section>
+
+  <section>
+    <h5>Apache CouchDB and Solr</h5>
+    <p>Apache has been around for some time and I have good experiences with the Apache web server. They have a NoSQL solution which also works with JSON document types and JavaScript as its query language.</p>
+    <p>Solr, also by Apache, is written in Java and runs in a container on an application server such as Apache Tomcat. It can be interacted with through web services. I am familiar with these technologies from the enterprise application environments I have worked with. It's probably not used in front end web development.</p>
+  </section>
+
+  <section>
+    <h5>Elasticsearch</h5>
+    <p>Another one I heard of before, which is why I looked into this. It's another web service based search provider which uses JSON documents. It is also written in Java.</p>
+  </section>
+
+  <section>
+    <h2>Final thoughts</h2>
+    <p>There are many more alternatives, but I'll leave it for here. It turns out that actually I am familiar with NoSQL, I just never heard these technologies referred to by this term. I think it's safe to say that NoSQL solutions mostly rely on JSON document types and implement various technologies to interact with these documents. This is interesting and I believe it's good to research these different solutions depending on the requirements faced.</p>
+    <p>This is what I like about technology, there is a constant innovation. It is about getting to know what is out there and making choices based on what serves the situation best. One of these factors can be your own experience with the technology. It's entirely possible that you want to be future proof, scalable and provide query responses to different end points. It could also be that your data storage is only required locally and your data structures are predictable. Both would require a different approach, so I'm glad we have many flavors to choose from.</p>
+  </section>
+
+</article>
+</div><div class="blog--nav"><div class="side-nav"><h5>Categories</h5><div class="side-nav--list"><div class="side-nav--list__item"><a href="/categories/technical.html">Technical (9)</a></div><div class="side-nav--list__item"><a href="/categories/cultural.html">Cultural (9)</a></div></div><h5>Recent Articles</h5><div class="side-nav--list"><div class="side-nav--list__item">24/03/15 - <a href="/2015/03/24/postgres-for-rails-in-linux.html">Postgres with Rails o...</a></div><div class="side-nav--list__item">12/03/15 - <a href="/2015/03/12/web-development-my-vocation.html">Web Development, my v...</a></div><div class="side-nav--list__item">01/10/14 - <a href="/2014/10/01/asking-questions.html">Asking Questions</a></div><div class="side-nav--list__item">30/09/14 - <a href="/2014/09/30/site-evaluation.html">Site Evaluation</a></div><div class="side-nav--list__item">28/09/14 - <a href="/2014/09/28/conflict.html">Conflict</a></div><div class="side-nav--list__item">28/09/14 - <a href="/2014/09/28/apache.html">Apache</a></div><div class="side-nav--list__item">17/09/14 - <a href="/2014/09/17/values.html">Values</a></div><div class="side-nav--list__item">16/09/14 - <a href="/2014/09/16/sql-or-nosql.html">SQL or NoSQL</a></div><div class="side-nav--list__item">13/09/14 - <a href="/2014/09/13/classes-and-modules.html">Classes and Modules</a></div><div class="side-nav--list__item">11/09/14 - <a href="/2014/09/11/identity-and-stereotype-threat.html">Identity and Stereopt...</a></div><div class="side-nav--list__item">06/09/14 - <a href="/2014/09/06/staying-classy.html">Staying Classy</a></div><div class="side-nav--list__item">05/09/14 - <a href="/2014/09/05/pair-programming.html">Pair Programming</a></div><div class="side-nav--list__item">30/08/14 - <a href="/2014/08/30/inequality-in-technology.html">Inequality in Technology</a></div><div class="side-nav--list__item">30/08/14 - <a href="/2014/08/30/ruby-cycle.html">Ruby Cycle</a></div><div class="side-nav--list__item">21/08/14 - <a href="/2014/08/21/thinking-and-learning.html">Thinking and Learning</a></div><div class="side-nav--list__item">20/08/14 - <a href="/2014/08/20/javascripts-popularity.html">JavaScript's popularity</a></div><div class="side-nav--list__item">08/08/14 - <a href="/2014/08/08/welcome-to-the-kitchen.html">Welcome to the Kitchen</a></div><div class="side-nav--list__item">08/08/14 - <a href="/2014/08/08/web-design-and-ui.html">Web Design and UI</a></div></div></div></div></div></div><footer><ul class="footer--contact"><li class="footer--contact--item"><a class="fa fa-twitter-square fa-3x footer--contact--item__link" href="https://twitter.com/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-github-square fa-3x footer--contact--item__link" href="https://github.com/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-linkedin-square fa-3x footer--contact--item__link" href="https://nl.linkedin.com/in/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-lastfm-square fa-3x footer--contact--item__link" href="https://www.last.fm/user/harlekein"></a></li></ul><div class="footer-copyright fa fa-copyright"> copyright 2015 Richard Baptist</div><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-60728788-1', 'auto');
+ga('send', 'pageview');</script></footer></body>

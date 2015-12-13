@@ -1,0 +1,571 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 7, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 32, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+body {
+  line-height: 1; }
+
+/* line 35, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+ol {
+  list-style: none; }
+
+/* line 38, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 41, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 46, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 50, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/reset.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_layout.sass */
+body {
+  background-color: #5A7C96; }
+
+/* line 4, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_layout.sass */
+header img {
+  border: 0.15em solid #1C2133;
+  border-radius: 0.4em; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #252B42;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 10, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2em;
+  font-color: #0A3860;
+  margin: 0 0 0.75em; }
+
+/* line 15, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  font-color: #0A3860; }
+
+/* line 20, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+h2,
+h3,
+h4,
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+  font-color: #0A3860; }
+
+/* line 30, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+p {
+  margin: 0 0 0.75em; }
+
+/* line 33, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+a {
+  color: #214F70;
+  text-decoration: none;
+  transition: color 0.25s linear; }
+  /* line 38, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+  a:active, a:focus, a:hover {
+    color: #102535; }
+  /* line 43, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+  a:active, a:focus {
+    outline: none; }
+
+/* line 47, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+hr {
+  border-bottom: 0.15em solid #1C2133;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+/* line 54, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/base/_typography.sass */
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+.article--content, article {
+  background-color: #F2DEB3;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  text-align: justify;
+  margin-bottom: 1.5em; }
+
+/* line 8, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+.article--header {
+  font-size: 1em; }
+
+/* line 11, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+.article--date {
+  text-align: right;
+  float: right;
+  clear: both;
+  margin-right: 0.5em; }
+
+/* line 17, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+.article--more {
+  font-size: 0.9em; }
+
+/* line 25, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+article header h1 {
+  font-size: 2em; }
+/* line 27, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_article.sass */
+article header img {
+  width: 100%;
+  height: 100%; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_blog.sass */
+.blog--wrapper {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 82em;
+  flex-wrap: wrap; }
+
+/* line 10, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_blog.sass */
+.blog--spacer {
+  width: 15em; }
+
+/* line 13, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_blog.sass */
+.blog--content {
+  width: 50em; }
+
+/* line 16, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_blog.sass */
+.blog--nav {
+  width: 15em; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_footer.sass */
+footer {
+  border-top: 1px solid #1C2133;
+  color: #A2E1F0;
+  margin: 2em 0;
+  padding-top: 1.6em; }
+
+/* line 7, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_footer.sass */
+.footer-copyright {
+  font-size: 0.7em;
+  position: relative;
+  margin-left: 0.8em;
+  margin-bottom: 0.8em;
+  float: left; }
+
+/* line 14, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_footer.sass */
+.footer--contact {
+  text-align: center; }
+
+/* line 17, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_footer.sass */
+.footer--contact--item {
+  font-size: 1.2em;
+  display: inline;
+  padding: 0 0.8em; }
+
+/* line 22, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_footer.sass */
+.footer--contact--item__link {
+  color: #A2E1F0; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_page_nav.sass */
+.page-nav--num {
+  color: #A2E1F0;
+  float: left;
+  margin-bottom: 0.6em; }
+
+/* line 6, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_page_nav.sass */
+.page-nav--next {
+  float: right;
+  text-align: right; }
+
+/* line 10, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_page_nav.sass */
+.page-nav--prev {
+  float: left;
+  clear: both; }
+
+/* line 14, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_page_nav.sass */
+.page-nav--link {
+  color: #A2E1F0; }
+  /* line 16, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_page_nav.sass */
+  .page-nav--link:active, .page-nav--link:focus, .page-nav--link:hover {
+    color: #102535; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_side_nav.sass */
+.side-nav {
+  background-color: #F2DEB3;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-weight: 500; }
+
+/* line 7, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_side_nav.sass */
+.side-nav--list {
+  margin-bottom: 1em; }
+
+/* line 10, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_side_nav.sass */
+.side-nav--list__item {
+  margin: 0.3em 0;
+  font-size: 0.9em; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_table.sass */
+.table-listing {
+  width: 75%;
+  margin-bottom: 1em;
+  font-size: 1.2em; }
+  /* line 5, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_table.sass */
+  .table-listing th {
+    font-weight: bold; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_title.sass */
+.title {
+  border-bottom: 1px solid #1C2133;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: 0.15em; }
+
+/* line 11, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_title.sass */
+.title--home-link {
+  color: #A2E1F0; }
+
+/* line 14, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/modules/_title.sass */
+.title--home-link__alt {
+  color: #0A3860; }
+
+/* line 1, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight table td {
+  padding: 5px; }
+
+/* line 2, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight table pre {
+  margin: 0; }
+
+/* line 3, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .c, .highlight .cd {
+  color: #75715e;
+  font-style: italic; }
+
+/* line 7, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .cm {
+  color: #75715e;
+  font-style: italic; }
+
+/* line 11, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic; }
+
+/* line 15, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold; }
+
+/* line 19, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic; }
+
+/* line 24, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010; }
+
+/* line 28, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932; }
+
+/* line 32, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131; }
+
+/* line 36, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .ge {
+  color: #000000;
+  font-style: italic; }
+
+/* line 40, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gr {
+  color: #aa0000; }
+
+/* line 43, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gt {
+  color: #aa0000; }
+
+/* line 46, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gh {
+  color: #999999; }
+
+/* line 49, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .go {
+  color: #888888; }
+
+/* line 52, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gp {
+  color: #555555; }
+
+/* line 55, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gs {
+  font-weight: bold; }
+
+/* line 58, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* line 61, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 65, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 69, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 73, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 77, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 81, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 85, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 89, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 93, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .o {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 97, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .mf {
+  color: #ae81ff; }
+
+/* line 100, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .mh {
+  color: #ae81ff; }
+
+/* line 103, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .il {
+  color: #ae81ff; }
+
+/* line 106, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .mi {
+  color: #ae81ff; }
+
+/* line 109, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .mo {
+  color: #ae81ff; }
+
+/* line 112, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff; }
+
+/* line 115, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .se {
+  color: #ae81ff; }
+
+/* line 118, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sb {
+  color: #e6db74; }
+
+/* line 121, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sc {
+  color: #e6db74; }
+
+/* line 124, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sd {
+  color: #e6db74; }
+
+/* line 127, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .s2 {
+  color: #e6db74; }
+
+/* line 130, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sh {
+  color: #e6db74; }
+
+/* line 133, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .si {
+  color: #e6db74; }
+
+/* line 136, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sx {
+  color: #e6db74; }
+
+/* line 139, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .sr {
+  color: #e6db74; }
+
+/* line 142, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .s1 {
+  color: #e6db74; }
+
+/* line 145, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .ss {
+  color: #e6db74; }
+
+/* line 148, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .s {
+  color: #e6db74; }
+
+/* line 151, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .na {
+  color: #a6e22e; }
+
+/* line 154, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold; }
+
+/* line 158, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold; }
+
+/* line 162, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold; }
+
+/* line 166, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nf {
+  color: #a6e22e;
+  font-weight: bold; }
+
+/* line 170, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .no {
+  color: #66d9ef; }
+
+/* line 173, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .bp {
+  color: #f8f8f2; }
+
+/* line 176, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nb {
+  color: #f8f8f2; }
+
+/* line 179, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .ni {
+  color: #f8f8f2; }
+
+/* line 182, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nn {
+  color: #f8f8f2; }
+
+/* line 185, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .vc {
+  color: #f8f8f2; }
+
+/* line 188, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .vg {
+  color: #f8f8f2; }
+
+/* line 191, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .vi {
+  color: #f8f8f2; }
+
+/* line 194, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nv {
+  color: #f8f8f2; }
+
+/* line 197, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .w {
+  color: #f8f8f2; }
+
+/* line 200, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold; }
+
+/* line 204, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight .nt {
+  color: #f92672; }
+
+/* line 207, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e; }
+
+/* line 210, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.highlight {
+  white-space: pre-wrap;
+  margin: 1em 0;
+  padding: 0 1em;
+  overflow-x: auto;
+  border-radius: 0.4em;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1em; }
+
+/* line 220, /home/richard/code/websites/richardbaptist.nl/source/stylesheets/rouge.css.erb */
+.inline-code {
+  font-size: 1em;
+  font-family: "Source Code Pro", monospace; }
