@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"></html><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"></html><![endif]--><!--[if gte IE 8]><html class="no-js"></html><![endif]--><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><title>Apache</title><meta content="" name="description" /><meta content="width=device-width" name="viewport" /><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:700&amp;subset=latin,latin-ext" rel="stylesheet" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" /><link href="../../../stylesheets/all.css" rel="stylesheet" /></head><body><!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a>or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>to better experience this site.</p><![endif]--><div class="title"><a class="title--home-link" href="/">Richard<span class="title--home-link__alt">Baptist</span> Web<span class="title--home-link__alt">Developer</span></a></div><div id="main" role="main"><div class="blog--wrapper"><div class="blog--spacer"></div><div class="blog--content"><article>
+  <header>
+    <h1>Apache Webserver</h1>
+    <img src="../../../images/blog/nginx_vs_apache.png" />
+    <span class="subtext">This could also be a beautiful friendship in the making.</span>
+  </header>
+  <section>
+    <p>This week I decided to write something about Apache Webserver which is an open source web server and the one most used one in the world. The <a href="http://news.netcraft.com/archives/2014/09/24/september-2014-web-server-survey.html" target="_blank">latest survey</a> shows 39.74% of all web servers is Apache. Time for a quick overview.</p>
+  </section>
+  
+  <section>
+    <h3>What is Apache?</h3>
+    <p>The first thing to be aware of that the web server isn't a physical machine like what you would normally think of as a server. Think of it more in the literal sense of the word: It mostly serves web pages, but web pages are simply html files. So a web server can serve any file. The file served depends on several things; The incoming request (person clicking on a link) and the rules set in the web server configuration.</p>
+  </section>
+  <section>
+    <h3>How does Apache work?</h3>
+    <p>Apache is started through the httpd, the "d" stands for <a href="http://en.wikipedia.org/wiki/Daemon_(computing)" target="_blank">daemon</a>. Like many terms in IT this is a cool name for a background process. If you are looking for an Apache HTTP server process that would be a good starting point to <a href="http://en.wikipedia.org/wiki/Grep" target="_blank">grep</a> for. When this process starts it will look for the httpd.conf file. The web servers main configuration file. In this file you can specify which other configuration files you would like to load. What's great about Apache is that you can reload the configuration without having to stop the process.</p>
+
+    <p>Apache is very secure as you can specify what may be executed where on a very detailed level. Which file types are allowed to be served? What type of requests are accepted?</p>
+    <pre class="code">
+      Listen 80
+      ServerRoot /usr/local/apache2
+      DocumentRoot /usr/local/webroot
+
+      &lt;Directory "/usr/local/webroot"&gt;
+      order allow,deny
+      allow from all
+      &lt;/Directory&gt;
+
+      &lt;IfModule mod_ssl.c&gt;
+        Include conf/ssl.conf
+      &lt;/IfModule&gt;
+    </pre>
+    <p>Listen is the port number on which the server should listen. The default for web browsing is port 80 and for secure browsing (https) this would be port 443. The server root is where the daemon will search for configuration files. The Documentroot is where the html (and other files) resides.</p>
+
+    <p>In this directory you can specify allow or deny rules based on IP addresses. This is very important for secure and controlled HTTP server environments. In this scenario all access is allowed and nothing denied, which means it is a public website.</p>
+
+    <p>Lastly, the IfModule inclusion specifies which modules to load. Apache has a large library of modules, including SSL configuration (as in the example), log configurations and also native coding language support.</p>
+
+    <p>For a more complete example of an httpd.conf file and further explanations please have a <a href="http://www.faqs.org/docs/securing/chap29sec245.html" target="_blank">look here</a>.</p>
+  </section>
+
+  <section>
+    <h3>Below the surface</h3>
+    <p>This only really scratches the surface. I have found the possibilities to be near endless. I would like to conclude with a short description of Nginx.</p>
+  </section>
+  <section>
+    <h3>Nginx</h3>
+    <p>As you an see in the survey link above, after Microsoft IIS, the most used web server is Nginx. (Pronounced Engine-X) It seems to be growing in popularity as well. Personally I wasn't really aware of the differences, but I found <a href="https://anturis.com/blog/nginx-vs-apache/" target="_blank">this excellent comparison</a> outlining the differences. Since we at DBC will be Ruby it is interesting to know that Ruby is one of the languages natively supported by Apache through the Ruby module; mod_ruby.
+    </p>
+  </section>
+
+  <section>
+    <h2>Finally</h2>
+    <p>I have worked with Apache, but haven't touched half of its options. Apache is relatively easy to set up on a simple environment and provides flexibility for complexity. I hope you enjoyed my brief overview here and if you are interested I would encourage looking up more resources. When you want to host the awesome websites and applications you will build it could be interesting to get more familiar with this technology.</p>
+    <p>Personally I also believe that the more knowledge you have over the entire chain in which your program runs, the easier you will be able to pinpoint any problems you run which in turn helps you to solve them faster. This has been my experience with problem analysis and troubleshooting over the years.</p>
+  </section>
+</article>
+</div><div class="blog--nav"><div class="side-nav"><h5>Categories</h5><div class="side-nav--list"><div class="side-nav--list__item"><a href="/categories/technical.html">Technical (9)</a></div><div class="side-nav--list__item"><a href="/categories/cultural.html">Cultural (9)</a></div></div><h5>Recent Articles</h5><div class="side-nav--list"><div class="side-nav--list__item"><a href="/2015/03/24/postgres-for-rails-in-linux.html">Postgres with Rails on Linux ...</a></div><div class="side-nav--list__item"><a href="/2015/03/12/web-development-my-vocation.html">Web Development, my vocation</a></div><div class="side-nav--list__item"><a href="/2014/10/01/asking-questions.html">Asking Questions</a></div><div class="side-nav--list__item"><a href="/2014/09/30/site-evaluation.html">Site Evaluation</a></div><div class="side-nav--list__item"><a href="/2014/09/28/conflict.html">Conflict</a></div><div class="side-nav--list__item"><a href="/2014/09/28/apache.html">Apache</a></div><div class="side-nav--list__item"><a href="/2014/09/17/values.html">Values</a></div><div class="side-nav--list__item"><a href="/2014/09/16/sql-or-nosql.html">SQL or NoSQL</a></div><div class="side-nav--list__item"><a href="/2014/09/13/classes-and-modules.html">Classes and Modules</a></div><div class="side-nav--list__item"><a href="/2014/09/11/identity-and-stereotype-threat.html">Identity and Stereoptype Threat</a></div><div class="side-nav--list__item"><a href="/2014/09/06/staying-classy.html">Staying Classy</a></div><div class="side-nav--list__item"><a href="/2014/09/05/pair-programming.html">Pair Programming</a></div><div class="side-nav--list__item"><a href="/2014/08/30/inequality-in-technology.html">Inequality in Technology</a></div><div class="side-nav--list__item"><a href="/2014/08/30/ruby-cycle.html">Ruby Cycle</a></div><div class="side-nav--list__item"><a href="/2014/08/21/thinking-and-learning.html">Thinking and Learning</a></div><div class="side-nav--list__item"><a href="/2014/08/20/javascripts-popularity.html">JavaScript's popularity</a></div><div class="side-nav--list__item"><a href="/2014/08/08/welcome-to-the-kitchen.html">Welcome to the Kitchen</a></div><div class="side-nav--list__item"><a href="/2014/08/08/web-design-and-ui.html">Web Design and UI</a></div></div></div></div></div></div><footer><ul class="footer--contact"><li class="footer--contact--item"><a class="fa fa-twitter-square fa-3x footer--contact--item__link" href="https://twitter.com/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-github-square fa-3x footer--contact--item__link" href="https://github.com/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-linkedin-square fa-3x footer--contact--item__link" href="https://nl.linkedin.com/in/rpbaptist"></a></li><li class="footer--contact--item"><a class="fa fa-lastfm-square fa-3x footer--contact--item__link" href="https://www.last.fm/user/harlekein"></a></li></ul><div class="footer-copyright fa fa-copyright"> copyright 2015 Richard Baptist</div><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-60728788-1', 'auto');
+ga('send', 'pageview');</script></footer></body>
