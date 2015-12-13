@@ -11,7 +11,8 @@ body
       .blog--spacer
 
       .blog--content
-        = yield
+        article.article--content
+          = yield
 
       .blog--nav
         = partial 'partials/side_nav'
