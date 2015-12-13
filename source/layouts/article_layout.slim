@@ -13,11 +13,17 @@ body
       .blog--content
         article.article--content
           header.article--header
+
             .article--date
               = current_article.date.strftime('%e %B %Y')
             h1 = current_article.title
 
-            = yield
+            = header_image(current_article.data.image)
+            - if current_article.data.subtext
+              span.article--header--image--subtext
+                = current_article.data.subtext
+
+          = yield
 
       .blog--nav
         = partial 'partials/side_nav'

@@ -14,3 +14,8 @@ end
 def contact_button(contact_url, name)
   link_to '', contact_url, class: "fa fa-#{name}-square fa-3x footer--contact--item__link"
 end
+
+def header_image(image_name)
+  return unless image_name
+  image_tag "/images/blog/#{image_name}", class: 'article--header--image'
+end

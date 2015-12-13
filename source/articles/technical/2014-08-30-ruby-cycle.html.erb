@@ -1,73 +1,68 @@
 ---
 title: Ruby Cycle
 tags: dbc, ruby
+image ruby_cycle.jpg
 ---
-<article>
-  <header>
-    <h1>Ruby Cycle</h1>
-    <%= image_tag '/images/blog/ruby_cycle.jpg' %>
-  </header>
-  <section>
-    <h2>Enumerables</h2>
-    <p>While I have been using enumerables I didn't really know how to describe them. It is the name for a collection of Ruby methods which we can use to make life easier. Sounds good to me.</p>
-  </section>
+<section>
+  <h2>Enumerables</h2>
+  <p>While I have been using enumerables I didn't really know how to describe them. It is the name for a collection of Ruby methods which we can use to make life easier. Sounds good to me.</p>
+</section>
 
-  <section>
-    <h3>Cycling</h3>
-    <p>i love cycling, but the Ruby version is a bit different. It goes on forever, yet doesn't take much effort. The .cycle method is a bit like the .each method, except that it will start over when it reaches the end.
-    READMORE
-      <% code 'ruby' do %>
-      > range = [1, 2, 3]
-      > range.cycle(2) {|i| puts i}
-      1
-      2
-      3
-      1
-      2
-      3
-      => nil
-      <% end %>
-      If I hadn't provided the (2) in the .cycle method, I would have created an infinite loop. Now it iterated through the array twice and it finishes with nil to indicate it has completed without interuption. Basically .cycle is an enhanced .each method.
-    </p>
-    <p>An interesting use of cycle is the following
-      <% code 'ruby' do %>
-      > cycle_through = range.cycle
-      => # &lt;Enumerator: [1, 2, 3]:cycle&gt;
-      > cycle_through.next
-      => 1
-      > cycle_through.next
-      => 2
-      > cycle_through.next
-      => 3
-      > cycle_through.next
-      => 1
-      <% end %>
-      If you have an array which is changed somewhere in your code, but you want to keep iterating through it and start over once you reach the end, this would be one way to do that. You can modify your array or hash and with cycle you are able to keep calling the next element.
-    </p>
+<section>
+  <h3>Cycling</h3>
+  <p>i love cycling, but the Ruby version is a bit different. It goes on forever, yet doesn't take much effort. The .cycle method is a bit like the .each method, except that it will start over when it reaches the end.
+  READMORE
+    <% code 'ruby' do %>
+    > range = [1, 2, 3]
+    > range.cycle(2) {|i| puts i}
+    1
+    2
+    3
+    1
+    2
+    3
+    => nil
+    <% end %>
+    If I hadn't provided the (2) in the .cycle method, I would have created an infinite loop. Now it iterated through the array twice and it finishes with nil to indicate it has completed without interuption. Basically .cycle is an enhanced .each method.
+  </p>
+  <p>An interesting use of cycle is the following
+    <% code 'ruby' do %>
+    > cycle_through = range.cycle
+    => # &lt;Enumerator: [1, 2, 3]:cycle&gt;
+    > cycle_through.next
+    => 1
+    > cycle_through.next
+    => 2
+    > cycle_through.next
+    => 3
+    > cycle_through.next
+    => 1
+    <% end %>
+    If you have an array which is changed somewhere in your code, but you want to keep iterating through it and start over once you reach the end, this would be one way to do that. You can modify your array or hash and with cycle you are able to keep calling the next element.
+  </p>
 
-    <p>You can also cycle backwards but that will require the use of the .reverse_each method.
-      <% code 'ruby' do %>
-      > range.reverse_each.cycle(2) { |i| puts i}
-      3
-      2
-      1
-      3
-      2
-      1
-      => nil
-      <% end %>
-      This also means you can cycle back one element at a time:
-      <% code 'ruby' do %>
-      > cycle_back = range.reverse_each.cycle
-      => # &lt;Enumerator: [1, 2, 3]:reverse_each&gt;cycle&gt;
-      > cycle_back.next
-      => 3
-      > cycle_back.next
-      => 2
-      > cycle_back.next
-      => 1
-      <% end %>
-    </p>
-    <p>Whoo! What a ride! I hope this provided you with some insight into this Enumerable and its use. For me, learning about this means I have another tool in my toolbox.</p>
-  </section>
-</article>
+  <p>You can also cycle backwards but that will require the use of the .reverse_each method.
+    <% code 'ruby' do %>
+    > range.reverse_each.cycle(2) { |i| puts i}
+    3
+    2
+    1
+    3
+    2
+    1
+    => nil
+    <% end %>
+    This also means you can cycle back one element at a time:
+    <% code 'ruby' do %>
+    > cycle_back = range.reverse_each.cycle
+    => # &lt;Enumerator: [1, 2, 3]:reverse_each&gt;cycle&gt;
+    > cycle_back.next
+    => 3
+    > cycle_back.next
+    => 2
+    > cycle_back.next
+    => 1
+    <% end %>
+  </p>
+  <p>Whoo! What a ride! I hope this provided you with some insight into this Enumerable and its use. For me, learning about this means I have another tool in my toolbox.</p>
+</section>

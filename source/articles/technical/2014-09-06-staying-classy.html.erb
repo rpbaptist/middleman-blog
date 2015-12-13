@@ -1,54 +1,51 @@
 ---
 title: Staying Classy
 tags: dbc, ruby
+image stayclassy.jpg
+subtext: Stay Classy, Ruby!
 ---
 
-<article>
-  <header>
-    <h1>Staying Classy</h1>
-    <%= image_tag '/images/blog/stayclassy.jpg' %>
-    <span class="subtext">Stay Classy, Ruby!</span>
-  </header>
-  <section>
-    <h3>Introducing Classes</h3>
-    <p>Classes are designed to perform a functionality by themselves. This functionality can be, and usually is part of a larger group of functions which we would call a program.</p>
-    <p>For this example I made a simple standalone class and I will guide you through it's design and function.</p>
-  </section>
-  READMORE
-  <section>
-    <h3>Video Game Class</h3>
-    <p>I wish I had this class when I went to school, but now I created it myself. First of all, you can view the complete code on my <a href="https://github.com/harlekein/harlekein.github.io/blob/master/assignments/VideoGame.rb">GitHub page right here.</a></p>
-    <p>Creating a class in Ruby is very straightforward. We simply declare the class. In order to use it we must define a method to initialize the class and the parameter it requires, in this case, we would like to know the title of the video game.</p>
-    <% code 'ruby' do %>
-      class VideoGame
-        def initialize(title)
-          @title = title
-        end
+<header>
+  <h1>Staying Classy</h1>
+</header>
+<section>
+  <h3>Introducing Classes</h3>
+  <p>Classes are designed to perform a functionality by themselves. This functionality can be, and usually is part of a larger group of functions which we would call a program.</p>
+  <p>For this example I made a simple standalone class and I will guide you through it's design and function.</p>
+</section>
+READMORE
+<section>
+  <h3>Video Game Class</h3>
+  <p>I wish I had this class when I went to school, but now I created it myself. First of all, you can view the complete code on my <a href="https://github.com/harlekein/harlekein.github.io/blob/master/assignments/VideoGame.rb">GitHub page right here.</a></p>
+  <p>Creating a class in Ruby is very straightforward. We simply declare the class. In order to use it we must define a method to initialize the class and the parameter it requires, in this case, we would like to know the title of the video game.</p>
+  <% code 'ruby' do %>
+    class VideoGame
+      def initialize(title)
+        @title = title
       end
+    end
+  <% end %>
+  <p>Then we can declare an instance variable @title. You can see this is an instance variable because it has a single @ in front of the variable name. This means it can be used outside of this function and inside other functions which will be an instance of this same class.
+  </p>
+  <p>This is best shown through a direct example:</p>
+  <% code 'ruby' do %>
+    irb:> Skyrim = VideoGame.new("Skyrim")
+    => #<VideoGame:0x007f650ccc57e0 @title="Skyrim">;
+    irb:> Skyrim.class
+    => VideoGame
+    irb:> Skyrim.class.superclass
     <% end %>
-    <p>Then we can declare an instance variable @title. You can see this is an instance variable because it has a single @ in front of the variable name. This means it can be used outside of this function and inside other functions which will be an instance of this same class.
-    </p>
-    <p>This is best shown through a direct example:</p>
-    <% code 'ruby' do %>
-      irb:> Skyrim = VideoGame.new("Skyrim")
-      => #<VideoGame:0x007f650ccc57e0 @title="Skyrim">;
-      irb:> Skyrim.class
-      => VideoGame
-      irb:> Skyrim.class.superclass
-      <% end %>
-    </pre>
-    <p>
-      In the first line I created a new instance of the class VideoGame by calling the new method and providing the title. This initializes the instance Skyrim, which exists separate, but inherits all properties of the VideoGame class.
-    </p>
-    <p>Now we can do all sorts of things. I added a method so we can "play" the game as well to "quit" it when we've had enough, or have others things to do. (Like coding.)</p>
-    <% code 'ruby' do %>
-      irb:> Skyrim.play
-      => "You start playing Skyrim. 10 hours pass. What? It's 2 am already? My morning self is gonna regret this."
-      irb:> Skyrim.quit
-      => "That's enough Skyrim for now."
-    <% end %>
-    <p>The reason I could call title from the first method in my two other methods is because I made it an instance variable. Otherwise I would have seen an error message instead of all this fancy stuff resembling real life experiences.</p>
-  </section>
+  </pre>
+  <p>
+    In the first line I created a new instance of the class VideoGame by calling the new method and providing the title. This initializes the instance Skyrim, which exists separate, but inherits all properties of the VideoGame class.
+  </p>
+  <p>Now we can do all sorts of things. I added a method so we can "play" the game as well to "quit" it when we've had enough, or have others things to do. (Like coding.)</p>
+  <% code 'ruby' do %>
+    irb:> Skyrim.play
+    => "You start playing Skyrim. 10 hours pass. What? It's 2 am already? My morning self is gonna regret this."
+    irb:> Skyrim.quit
+    => "That's enough Skyrim for now."
+  <% end %>
+  <p>The reason I could call title from the first method in my two other methods is because I made it an instance variable. Otherwise I would have seen an error message instead of all this fancy stuff resembling real life experiences.</p>
+</section>
 
-
-</article>
