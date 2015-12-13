@@ -12,7 +12,12 @@ body
 
       .blog--content
         article.article--content
-          = yield
+          header.article--header
+            .article--date
+              = current_article.date.strftime('%e %B %Y')
+            h1 = current_article.title
+
+            = yield
 
       .blog--nav
         = partial 'partials/side_nav'
