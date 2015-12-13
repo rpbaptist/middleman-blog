@@ -5,15 +5,10 @@ image: nginx_vs_apache.png
 subtext: This could also be a beautiful friendship in the making.
 published: false
 ---
-<section>
   <p>This week I decided to write something about Apache Webserver which is an open source web server and the one most used one in the world. The <a href="http://news.netcraft.com/archives/2014/09/24/september-2014-web-server-survey.html" target="_blank">latest survey</a> shows 39.74% of all web servers is Apache. Time for a quick overview.</p>
-</section>
-READMORE
-<section>
+
   <h3>What is Apache?</h3>
   <p>The first thing to be aware of that the web server isn't a physical machine like what you would normally think of as a server. Think of it more in the literal sense of the word: It mostly serves web pages, but web pages are simply html files. So a web server can serve any file. The file served depends on several things; The incoming request (person clicking on a link) and the rules set in the web server configuration.</p>
-</section>
-<section>
   <h3>How does Apache work?</h3>
   <p>Apache is started through the httpd, the "d" stands for <a href="http://en.wikipedia.org/wiki/Daemon_(computing)" target="_blank">daemon</a>. Like many terms in IT this is a cool name for a background process. If you are looking for an Apache HTTP server process that would be a good starting point to <a href="http://en.wikipedia.org/wiki/Grep" target="_blank">grep</a> for. When this process starts it will look for the httpd.conf file. The web servers main configuration file. In this file you can specify which other configuration files you would like to load. What's great about Apache is that you can reload the configuration without having to stop the process.</p>
 
@@ -39,20 +34,13 @@ READMORE
   <p>Lastly, the IfModule inclusion specifies which modules to load. Apache has a large library of modules, including SSL configuration (as in the example), log configurations and also native coding language support.</p>
 
   <p>For a more complete example of an httpd.conf file and further explanations please have a <a href="http://www.faqs.org/docs/securing/chap29sec245.html" target="_blank">look here</a>.</p>
-</section>
 
-<section>
   <h3>Below the surface</h3>
   <p>This only really scratches the surface. I have found the possibilities to be near endless. I would like to conclude with a short description of Nginx.</p>
-</section>
-<section>
   <h3>Nginx</h3>
   <p>As you an see in the survey link above, after Microsoft IIS, the most used web server is Nginx. (Pronounced Engine-X) It seems to be growing in popularity as well. Personally I wasn't really aware of the differences, but I found <a href="https://anturis.com/blog/nginx-vs-apache/" target="_blank">this excellent comparison</a> outlining the differences. Since we at DBC will be Ruby it is interesting to know that Ruby is one of the languages natively supported by Apache through the Ruby module; mod_ruby.
   </p>
-</section>
 
-<section>
   <h2>Finally</h2>
   <p>I have worked with Apache, but haven't touched half of its options. Apache is relatively easy to set up on a simple environment and provides flexibility for complexity. I hope you enjoyed my brief overview here and if you are interested I would encourage looking up more resources. When you want to host the awesome websites and applications you will build it could be interesting to get more familiar with this technology.</p>
   <p>Personally I also believe that the more knowledge you have over the entire chain in which your program runs, the easier you will be able to pinpoint any problems you run which in turn helps you to solve them faster. This has been my experience with problem analysis and troubleshooting over the years.</p>
-</section>
