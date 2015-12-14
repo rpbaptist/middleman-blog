@@ -71,21 +71,9 @@ Again, the first iteration had the validations right in there, but it became cle
 class OrderPaymentValidator
   include ActiveModel::Validations
 
-  delegate(
-    :buyer,
-    :payment_confirmation,
-    :product,
-    :errors,
-    to: :assessment
-  )
+  delegate :buyer, :payment_confirmation, :product, :errors, to: :assessment
 
-  validates(
-    :buyer,
-    :payment_confirmation,
-    :product,
-    presence: true
-  )
-
+  validates :buyer,:payment_confirmation,:product, presence: true
   validates :address, presence: true, if: :ship_order?
 
   attr_reader :order
