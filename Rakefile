@@ -3,6 +3,7 @@
 
 GH_USER = 'rpbaptist'
 GIT_MAIL = 'rpbaptist@gmail.com'
+SITE_URL = 'https://richardbaptist.nl'
 
 desc 'build static pages'
 task :build do
@@ -24,6 +25,7 @@ task :deploy do
     puts '## Pushing generated website'
     system 'git push origin +master'
     puts '## Github Pages deploy complete'
+    puts "View your site at #{SITE_URL}"
   end
 end
 
