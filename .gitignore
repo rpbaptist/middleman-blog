@@ -15,4 +15,4 @@
 *.fuse_hidden*
 
 # Ignore build dir
-/build/
+/build
