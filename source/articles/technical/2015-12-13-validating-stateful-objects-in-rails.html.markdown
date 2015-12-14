@@ -7,6 +7,8 @@ Let's talk about state. Or actually, let's not talk about state. I think we have
 
 There is a trap though. Things can become very messy, very quick. I have seen this in code bases I inherited as well as ones I helped create. While working at a project with a colleague we ran into state and wanted to curtail the increasing amount of code it started to bleed.
 
+READMORE
+
 A short example to explain what kind of state I am talking about:
 
 ```ruby
