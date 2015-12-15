@@ -4,10 +4,19 @@
   padding: 0.5em
   text-align: justify
   margin-bottom: 1.5em
+  a
+    color: #256CAB
+    text-decoration: underline
+    &:hover
+      color: lighten($action-color, 15%)
+      text-decoration: none
 
 .article--header
   font-size: 1em
   margin-bottom: 0.7em
+  a
+    color: $action-color
+    text-decoration: none
 
 .article--date
   text-align: right
@@ -17,6 +26,8 @@
 
 .article--more
   font-size: 0.9em
+  a
+    text-decoration: none
 
 .article--header--image
   width: 100%
