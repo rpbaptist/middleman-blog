@@ -13,7 +13,9 @@ per_page: 5
     .article--summary
       = article.summary
       .article--more
-        = link_to ' read more...', article, class: 'fa fa-angle-double-right'
+        = link_to article do
+          span.fa.fa-angle-double-right>
+          span.article--more__read read more...
 
 .page-nav
   - if paginate && num_pages > 1
