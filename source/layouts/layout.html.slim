@@ -1,19 +1,20 @@
 doctype html
-= partial 'partials/old_browsers'
-= partial 'partials/head'
-body
-  = partial 'partials/browsehappy'
+html
+  = partial 'partials/head'
 
-  = partial 'partials/title'
+  body
+    = partial 'partials/browsehappy'
 
-  #main role='main'
-    .blog--wrapper
-      .blog--spacer
+    = partial 'partials/title'
 
-      .blog--content
-        = yield
+    #main role='main'
+      .blog--wrapper
+        .blog--spacer
 
-      .blog--nav
-        = partial 'partials/side_nav'
+        .blog--content
+          = yield
 
-  = partial 'partials/footer'
+        .blog--nav
+          = partial 'partials/side_nav'
+
+    = partial 'partials/footer'
