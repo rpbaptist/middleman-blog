@@ -1,7 +1,5 @@
 # richardbaptist.nl
-Personal blog site
-
-This is just my own blog site made in Middleman and using Bourbon/Neat/Bitters.
+Personal blog site made with Middleman.
 
 ## Run locally
 `bundle exec middleman s` 
@@ -14,17 +12,3 @@ This is just my own blog site made in Middleman and using Bourbon/Neat/Bitters.
 
 ## Build and deploy
 `rake publish` 
-
-```ruby
-Some code goes here
-```
-
-> Some code goes here
-
-- some list
-- another item
-- wow cool
-
-**strong**
-
-_italic_
