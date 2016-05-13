@@ -9,7 +9,6 @@ gem 'middleman-syntax'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
-gem 'brice'
 gem 'middleman-livereload'
 gem 'nokogiri'
 gem 'pry'
