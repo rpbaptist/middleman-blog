@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'middleman'
 gem 'middleman-blog'
+gem 'middleman-gh-pages'
 gem 'middleman-syntax'
 
 # For feed.xml.builder
