@@ -1,24 +1,14 @@
-###
+require 'middleman-gh-pages'
+
 # Blog settings
-###
-
-# Time.zone = "UTC"
-
 activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
-
   blog.sources = "articles/{category}/{year}-{month}-{day}-{title}.html"
   blog.permalink = "{year}/{month}/{day}/{title}.html"
-  # Matcher for blog source files
   blog.taglink = "tags/{tag}.html"
   blog.layout = "article_layout"
   blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 100000
   blog.year_link = "{year}.html"
   blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
   blog.custom_collections = {
     category: {
       link: 'categories/{category}.html',
@@ -36,10 +26,7 @@ end
 
 page "/feed.xml", layout: false
 
-###
 # Helpers
-###
-
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 activate :syntax
@@ -56,18 +43,5 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
   activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
 end

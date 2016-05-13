@@ -1,8 +1,10 @@
 # Slight adjustment from this source:
 # http://sourcey.com/middleman-automated-github-pages-deployments-with-rake
 
+# middleman-gh-pages settings
+BRANCH_NAME=master
+
 GH_USER = 'rpbaptist'
-GIT_MAIL = 'rpbaptist@gmail.com'
 SITE_URL = 'https://richardbaptist.nl'
 
 desc 'build static pages'
@@ -20,7 +22,6 @@ task :deploy do
     system 'git add --all'
     message = "Site updated at #{Time.now.utc}"
     puts "## Commiting: #{message}"
-    system "git config user.email #{GIT_MAIL}"
     system "git commit -m \"#{message}\""
     puts '## Pushing generated website'
     system 'git push origin +master'
