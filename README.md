@@ -1,14 +1,24 @@
 # richardbaptist.nl
-Personal blog site made with Middleman.
+Personal blog site built with Middleman.
+
+## Download
+
+`git clone git@github.com:rpbaptist/richardbaptist.nl.git`
 
 ## Run locally
 `bundle exec middleman s` 
 
 ## Build site
-`bundle exec middleman build` 
-
-## Deploy site
-`rake deploy`
+`rake build` 
 
 ## Build and deploy
+
+First configure ENV variables in `Rakefile`.
+
+Add the github pages as a remote:
+
+`git remote add github-io git@github.com:rpbaptist/rpbaptist.github.io.git`
+
+Then publish:
+
 `rake publish` 
