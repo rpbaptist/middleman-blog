@@ -1,5 +1,5 @@
 # richardbaptist.nl
-Personal blog site built with Middleman.
+Personal blog site built with Middleman. I mostly did this because I wanted to figure out Middleman.
 
 ## Download
 
